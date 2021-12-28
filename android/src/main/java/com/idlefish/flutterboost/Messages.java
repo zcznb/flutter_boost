@@ -10,6 +10,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.HashMap;
 
+import com.idlefish.flutterboost.CustomizeStandardMessageCodec;
+
 /** Generated class from Pigeon. */
 @SuppressWarnings({"unused", "unchecked", "CodeBlock2Expr", "RedundantSuppression"})
 public class Messages {
@@ -102,7 +104,7 @@ public class Messages {
     }
     public void pushRoute(CommonParams argInput, Reply<Void> callback) {
       BasicMessageChannel<Object> channel =
-          new BasicMessageChannel<>(binaryMessenger, "dev.flutter.pigeon.FlutterRouterApi.pushRoute", new StandardMessageCodec());
+          new BasicMessageChannel<>(binaryMessenger, "dev.flutter.pigeon.FlutterRouterApi.pushRoute", new CustomizeStandardMessageCodec());
       Map<String, Object> inputMap = argInput.toMap();
       channel.send(inputMap, channelReply -> {
         callback.reply(null);
@@ -110,7 +112,7 @@ public class Messages {
     }
     public void popRoute(CommonParams argInput, Reply<Void> callback) {
       BasicMessageChannel<Object> channel =
-          new BasicMessageChannel<>(binaryMessenger, "dev.flutter.pigeon.FlutterRouterApi.popRoute", new StandardMessageCodec());
+          new BasicMessageChannel<>(binaryMessenger, "dev.flutter.pigeon.FlutterRouterApi.popRoute", new CustomizeStandardMessageCodec());
       Map<String, Object> inputMap = argInput.toMap();
       channel.send(inputMap, channelReply -> {
         callback.reply(null);
@@ -118,7 +120,7 @@ public class Messages {
     }
     public void removeRoute(CommonParams argInput, Reply<Void> callback) {
       BasicMessageChannel<Object> channel =
-          new BasicMessageChannel<>(binaryMessenger, "dev.flutter.pigeon.FlutterRouterApi.removeRoute", new StandardMessageCodec());
+          new BasicMessageChannel<>(binaryMessenger, "dev.flutter.pigeon.FlutterRouterApi.removeRoute", new CustomizeStandardMessageCodec());
       Map<String, Object> inputMap = argInput.toMap();
       channel.send(inputMap, channelReply -> {
         callback.reply(null);
@@ -126,7 +128,7 @@ public class Messages {
     }
     public void onForeground(CommonParams argInput, Reply<Void> callback) {
       BasicMessageChannel<Object> channel =
-          new BasicMessageChannel<>(binaryMessenger, "dev.flutter.pigeon.FlutterRouterApi.onForeground", new StandardMessageCodec());
+          new BasicMessageChannel<>(binaryMessenger, "dev.flutter.pigeon.FlutterRouterApi.onForeground", new CustomizeStandardMessageCodec());
       Map<String, Object> inputMap = argInput.toMap();
       channel.send(inputMap, channelReply -> {
         callback.reply(null);
@@ -134,7 +136,7 @@ public class Messages {
     }
     public void onBackground(CommonParams argInput, Reply<Void> callback) {
       BasicMessageChannel<Object> channel =
-          new BasicMessageChannel<>(binaryMessenger, "dev.flutter.pigeon.FlutterRouterApi.onBackground", new StandardMessageCodec());
+          new BasicMessageChannel<>(binaryMessenger, "dev.flutter.pigeon.FlutterRouterApi.onBackground", new CustomizeStandardMessageCodec());
       Map<String, Object> inputMap = argInput.toMap();
       channel.send(inputMap, channelReply -> {
         callback.reply(null);
@@ -142,7 +144,7 @@ public class Messages {
     }
     public void onNativeResult(CommonParams argInput, Reply<Void> callback) {
       BasicMessageChannel<Object> channel =
-          new BasicMessageChannel<>(binaryMessenger, "dev.flutter.pigeon.FlutterRouterApi.onNativeResult", new StandardMessageCodec());
+          new BasicMessageChannel<>(binaryMessenger, "dev.flutter.pigeon.FlutterRouterApi.onNativeResult", new CustomizeStandardMessageCodec());
       Map<String, Object> inputMap = argInput.toMap();
       channel.send(inputMap, channelReply -> {
         callback.reply(null);
@@ -150,7 +152,7 @@ public class Messages {
     }
     public void onContainerShow(CommonParams argInput, Reply<Void> callback) {
       BasicMessageChannel<Object> channel =
-          new BasicMessageChannel<>(binaryMessenger, "dev.flutter.pigeon.FlutterRouterApi.onContainerShow", new StandardMessageCodec());
+          new BasicMessageChannel<>(binaryMessenger, "dev.flutter.pigeon.FlutterRouterApi.onContainerShow", new CustomizeStandardMessageCodec());
       Map<String, Object> inputMap = argInput.toMap();
       channel.send(inputMap, channelReply -> {
         callback.reply(null);
@@ -158,7 +160,7 @@ public class Messages {
     }
     public void onContainerHide(CommonParams argInput, Reply<Void> callback) {
       BasicMessageChannel<Object> channel =
-          new BasicMessageChannel<>(binaryMessenger, "dev.flutter.pigeon.FlutterRouterApi.onContainerHide", new StandardMessageCodec());
+          new BasicMessageChannel<>(binaryMessenger, "dev.flutter.pigeon.FlutterRouterApi.onContainerHide", new CustomizeStandardMessageCodec());
       Map<String, Object> inputMap = argInput.toMap();
       channel.send(inputMap, channelReply -> {
         callback.reply(null);
@@ -166,7 +168,7 @@ public class Messages {
     }
     public void sendEventToFlutter(CommonParams argInput, Reply<Void> callback) {
       BasicMessageChannel<Object> channel =
-          new BasicMessageChannel<>(binaryMessenger, "dev.flutter.pigeon.FlutterRouterApi.sendEventToFlutter", new StandardMessageCodec());
+          new BasicMessageChannel<>(binaryMessenger, "dev.flutter.pigeon.FlutterRouterApi.sendEventToFlutter", new CustomizeStandardMessageCodec());
       Map<String, Object> inputMap = argInput.toMap();
       channel.send(inputMap, channelReply -> {
         callback.reply(null);
@@ -174,7 +176,7 @@ public class Messages {
     }
     public void onBackPressed(Reply<Void> callback) {
       BasicMessageChannel<Object> channel =
-          new BasicMessageChannel<>(binaryMessenger, "dev.flutter.pigeon.FlutterRouterApi.onBackPressed", new StandardMessageCodec());
+          new BasicMessageChannel<>(binaryMessenger, "dev.flutter.pigeon.FlutterRouterApi.onBackPressed", new CustomizeStandardMessageCodec());
       channel.send(null, channelReply -> {
         callback.reply(null);
       });
@@ -194,7 +196,7 @@ public class Messages {
     static void setup(BinaryMessenger binaryMessenger, NativeRouterApi api) {
       {
         BasicMessageChannel<Object> channel =
-            new BasicMessageChannel<>(binaryMessenger, "dev.flutter.pigeon.NativeRouterApi.pushNativeRoute", new StandardMessageCodec());
+            new BasicMessageChannel<>(binaryMessenger, "dev.flutter.pigeon.NativeRouterApi.pushNativeRoute", new CustomizeStandardMessageCodec());
         if (api != null) {
           channel.setMessageHandler((message, reply) -> {
             Map<String, Object> wrapped = new HashMap<>();
@@ -215,7 +217,7 @@ public class Messages {
       }
       {
         BasicMessageChannel<Object> channel =
-            new BasicMessageChannel<>(binaryMessenger, "dev.flutter.pigeon.NativeRouterApi.pushFlutterRoute", new StandardMessageCodec());
+            new BasicMessageChannel<>(binaryMessenger, "dev.flutter.pigeon.NativeRouterApi.pushFlutterRoute", new CustomizeStandardMessageCodec());
         if (api != null) {
           channel.setMessageHandler((message, reply) -> {
             Map<String, Object> wrapped = new HashMap<>();
@@ -236,7 +238,7 @@ public class Messages {
       }
       {
         BasicMessageChannel<Object> channel =
-            new BasicMessageChannel<>(binaryMessenger, "dev.flutter.pigeon.NativeRouterApi.popRoute", new StandardMessageCodec());
+            new BasicMessageChannel<>(binaryMessenger, "dev.flutter.pigeon.NativeRouterApi.popRoute", new CustomizeStandardMessageCodec());
         if (api != null) {
           channel.setMessageHandler((message, reply) -> {
             Map<String, Object> wrapped = new HashMap<>();
@@ -256,7 +258,7 @@ public class Messages {
       }
       {
         BasicMessageChannel<Object> channel =
-            new BasicMessageChannel<>(binaryMessenger, "dev.flutter.pigeon.NativeRouterApi.getStackFromHost", new StandardMessageCodec());
+            new BasicMessageChannel<>(binaryMessenger, "dev.flutter.pigeon.NativeRouterApi.getStackFromHost", new CustomizeStandardMessageCodec());
         if (api != null) {
           channel.setMessageHandler((message, reply) -> {
             Map<String, Object> wrapped = new HashMap<>();
@@ -275,7 +277,7 @@ public class Messages {
       }
       {
         BasicMessageChannel<Object> channel =
-            new BasicMessageChannel<>(binaryMessenger, "dev.flutter.pigeon.NativeRouterApi.saveStackToHost", new StandardMessageCodec());
+            new BasicMessageChannel<>(binaryMessenger, "dev.flutter.pigeon.NativeRouterApi.saveStackToHost", new CustomizeStandardMessageCodec());
         if (api != null) {
           channel.setMessageHandler((message, reply) -> {
             Map<String, Object> wrapped = new HashMap<>();
@@ -296,7 +298,7 @@ public class Messages {
       }
       {
         BasicMessageChannel<Object> channel =
-            new BasicMessageChannel<>(binaryMessenger, "dev.flutter.pigeon.NativeRouterApi.sendEventToNative", new StandardMessageCodec());
+            new BasicMessageChannel<>(binaryMessenger, "dev.flutter.pigeon.NativeRouterApi.sendEventToNative", new CustomizeStandardMessageCodec());
         if (api != null) {
           channel.setMessageHandler((message, reply) -> {
             Map<String, Object> wrapped = new HashMap<>();
